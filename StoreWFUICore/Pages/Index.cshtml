@@ -1,0 +1,42 @@
+﻿@page
+@using StoreWFUICore.Data
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<p>
+    <a asp-page="NewFWRule">Create New</a>
+</p>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sub</th>
+                <th>RG</th>
+                <th>Account</th>
+                <th>IsPrivate</th>
+                <th>IpList</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.FWRoot != null)
+            {
+                foreach (var storageFirewall in Model.FWRoot.storagefirewalls)
+                {
+                    <tr>
+                        <td> @storageFirewall.subId </td>
+                        <td>@storageFirewall.rgName</td>
+                        <td>@storageFirewall.accountName</td>
+                        <td>@storageFirewall.isPrivate</td>
+                        <td>@storageFirewall.firewallIPs</td>
+                        <td>
+                            <a asp-page="./FWRule" asp-route-name="@storageFirewall.GetKey()" asp-route-id="1">Edit</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

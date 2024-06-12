@@ -1,0 +1,46 @@
+﻿@page
+@model StoreWFUICore.Pages.FWRuleModel
+
+<h1>Edit Firewall Rule</h1>
+
+<h4>Firewall Rule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Firewall.subId" class="control-label"></label>
+                <input asp-for="Firewall.subId" class="form-control" readonly />
+                <span asp-validation-for="Firewall.subId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Firewall.rgName" class="control-label"></label>
+                <input asp-for="Firewall.rgName" class="form-control" readonly />
+                <span asp-validation-for="Firewall.rgName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Firewall.accountName" class="control-label"></label>
+                <input asp-for="Firewall.accountName" class="form-control" readonly />
+                <span asp-validation-for="Firewall.accountName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Firewall.firewallIPs" class="control-label"></label>
+                <input asp-for="Firewall.firewallIPs" class="form-control" />
+                <span asp-validation-for="Firewall.firewallIPs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Firewall.isPrivate" class="control-label"></label>
+                <input type="checkbox" asp-for="Firewall.isPrivate" value="Firewall.isPrivate"/>
+                <span asp-validation-for="Firewall.isPrivate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>

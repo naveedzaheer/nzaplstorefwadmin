@@ -1,0 +1,18 @@
+{
+    "storagefirewalls": [
+        {
+            "subId": "xxxx-xxx-xxx-xxx-xxxx",
+            "rgName": "xyz-rg",
+            "accountName": "abcstore01",
+            "isPrivate": false,
+            "firewallIPs": "122.33.55.81,122.33.66.0/24"
+        },
+        {
+            "subId": "xxxx-xxx-xxx-xxx-xxxx",
+            "rgName": "xyz-rg",
+            "accountName": "abcstore02",
+            "isPrivate": false,
+            "firewallIPs": "122.33.44.89"
+        }
+    ]
+}
